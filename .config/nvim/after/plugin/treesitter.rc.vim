@@ -17,12 +17,13 @@ require'nvim-treesitter.configs'.setup {
     "tsx",
     "toml",
     "fish",
-    "php",
     "json",
     "yaml",
     "swift",
     "html",
-    "scss"
+    "scss",
+    "javascript",
+    "markdown"
   },
   autotag = {
     enable = true,

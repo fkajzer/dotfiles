@@ -1,5 +1,8 @@
 set fish_greeting ""
 
+# dotfiles alias 
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 set -gx TERM xterm-256color
 
 # theme

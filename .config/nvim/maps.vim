@@ -10,7 +10,8 @@ nnoremap + <C-a>
 nnoremap - <C-x>
 
 " Delete a word backwards
-nnoremap dw vb"_d
+" Disable for now while learning since it is same binding as db
+" nnoremap dw vb"_d
 
 " Select all
 nmap <C-a> gg<S-v>G
