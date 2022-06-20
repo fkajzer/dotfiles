@@ -37,7 +37,7 @@ vnoremap <silent> # :<C-U>
 " Open current directory
 nmap te :tabedit 
 nmap <S-Tab> :tabprev<Return>
-nmap <Tab> :tabnext<Return>
+nmap <C-Tab> :tabnext<Return>
 
 "------------------------------
 " Windows
