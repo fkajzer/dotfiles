@@ -29,6 +29,7 @@ if has("nvim")
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
   Plug 'github/copilot.vim'
+  Plug 'sbdchd/neoformat'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
