@@ -1,7 +1,8 @@
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/fkjzr/.gitignore_global
 	editor = nvim
 	ignorecase = false
+	autocrlf = input
 [push]
   default = simple
 [color]
@@ -35,11 +36,10 @@
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   # add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+  up = "!git submodule init && git submodule update"
 
 [hub]
   protocol = https
-[github]
-	user = craftzdog
 [diff]
   tool = nvimdiff
 [difftool "nvimdiff"]
@@ -55,3 +55,8 @@
 	process = git-lfs filter-process
 [ghq]
   root = ~/.ghq
+[user]
+	name = kijz
+	email = filipkajzer@gmail.com
+[credential]
+	helper = manager
