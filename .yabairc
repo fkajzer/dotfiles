@@ -72,6 +72,9 @@ yabai -m rule --add app="^Preview" manage=off
 yabai -m rule --add title="^Vulkan" manage=off
 yabai -m rule --add app="Vulkan" manage=off
 
+yabai -m rule --add title="^Window" manage=off
+yabai -m rule --add app="Window" manage=off
+
 yabai -m rule --add title="^Unity Hub" manage=off
 yabai -m rule --add title="^Bezel" manage=off
 

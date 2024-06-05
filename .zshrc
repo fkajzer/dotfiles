@@ -81,3 +81,5 @@ export PATH="$PATH:/sbin"
 
 source <(pkgx --shellcode)  #docs.pkgx.sh/shellcode
 
+export PATH=/Users/fkjzr/.local/bin:/Users/fkjzr/.asdf/shims:/opt/homebrew/opt/asdf/libexec/bin:/Users/fkjzr/VulkanSDK/1.3.280.1/macOS/bin:/usr/local/bin:/Applications/kitty.app/Contents/MacOS:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/bin:/opt/homebrew/bin:/Users/fkjzr/.antigen/bundles/robbyrussell/oh-my-zsh/lib:/Users/fkjzr/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git:/Users/fkjzr/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/heroku:/Users/fkjzr/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/lein:/Users/fkjzr/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/command-not-found:/Users/fkjzr/.antigen/bundles/zsh-users/zsh-completions:/Users/fkjzr/.antigen/bundles/agkozak/zsh-z:/Users/fkjzr/.antigen/bundles/zsh-users/zsh-syntax-highlighting:/Users/fkjzr/.antigen/bundles/romkatv/powerlevel10k:/sbin:/opt/cross/bin
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

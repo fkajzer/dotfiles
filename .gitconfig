@@ -37,6 +37,7 @@
   # add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
   up = "!git submodule init && git submodule update"
+	adog = log --all --decorate --oneline --graph
 
 [hub]
   protocol = https
