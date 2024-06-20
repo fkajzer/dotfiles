@@ -1,0 +1,149 @@
+" settings
+set hlsearch
+set timeoutlen=300 " timeout until key combination is evaluated
+" case insensitive search when using lowercase, else sensitive
+set ignorecase
+set smartcase
+" set (not) relativenumber
+set number
+
+" plugins
+" https://superuser.com/questions/622898/how-to-turn-off-the-bell-sound-in-intellij
+" https://stackoverflow.com/questions/63386803/how-to-turn-off-a-bell-in-intellij-idea
+set visualbell
+set surround "https://github.com/JetBrains/ideavim/blob/master/doc/emulated-plugins.md
+set highlightedyank "https://youtrack.jetbrains.com/issue/VIM-1970 
+set ideamarks "https://youtrack.jetbrains.com/issue/VIM-959
+set ideajoin "https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-examples
+set argtextobj "dia daa cia caa
+set textobj-entire "die dae cie cae
+set NERDTree "https://youtrack.jetbrains.com/issue/VIM-1042
+set vim-paragraph-motion "https://github.com/JetBrains/ideavim/wiki/Emulated-plugins#vim-paragraph-motion
+set textobj-indent "https://github.com/JetBrains/ideavim/wiki/Emulated-plugins#vim-indent-object
+set exchange
+" set quickscope // TODO not working atm
+set quickscope
+
+" https://github.com/JetBrains/ideavim/wiki/Select-mode
+" set selectmode-=template
+
+"quick reload config
+nmap <leader>qq <action>(IdeaVim.ReloadVimRc.reload)
+
+"exit highlighting on Esc on normal mode
+nmap <Esc> :noh <CR>
+
+"set leader to space bar
+let mapleader = "\ " 
+
+"paste from 0 register, meaning the last thing yanked
+map <leader>p \"0p
+
+" keymap AIAssistant
+map <leader>ae <action>(AIAssistant.ToolsDropdown)
+map <leader>ap <action>(AIAssistant.ToolWindow.Snippet.InsertAtCaret)
+map <leader>al <action>(AIAssistant.ToolWindow.Chat.Input.PromptList)
+map <leader>ai <action>(ActivateAIAssistantToolWindow)
+
+" keymap LSP style settings
+map <leader>ra <action>(RenameElement)
+map gi <action>(GotoImplementation)
+map gr gd
+map <leader>fs <action>(FileStructurePopup)
+map <leader>ca <action>(ShowIntentionActions)
+map <leader>lf <action>(ShowErrorDescription)
+map [d <action>(GotoPreviousError)
+map ]d <action>(GotoNextError)
+" does not work / wierd bug with cursors
+"map <leader>o <action>(SelectNextOccurrences)
+"map <leader>O <action>(SelectAllOccurrences)
+
+" keymap debugging
+map <leader>tb <action>(ToggleLineBreakpoint)
+map <leader>tbm <action>(ToggleMethodBreakpoint)
+
+" keymap quick commenting
+map <leader>b/ <action>(CommentByBlockComment)
+map <leader>/ <action>(CommentByLineComment)
+
+" keymap find *
+map <leader>fi <action>(SelectIn)
+map <leader>F <action>(ShowFilePath)
+map <leader>fw <action>(FindInPath)
+map <leader>fz <action>(FindUsages)
+map <leader>fZ <action>(HighlightUsagesInFile)
+map <leader>ft <action>(ActivateTODOToolWindow)
+map <leader>q <action>(ActivateProblemsViewToolWindow)
+map <leader>fg <action>(ActivateCommitToolWindow)
+map <leader>fc <action>(ActivateCommitToolWindow)
+
+" just use SearchEverywhere for all Telescope functions
+map <leader>fo <action>(SearchEverywhere)
+map <leader>ff <action>(SearchEverywhere)
+map <leader>fb <action>(SearchEverywhere)
+ 
+" keymap NERDTree / window management
+map <leader>w <action>(HideAllWindows)
+map <leader>W <action>(JumpToLastWindow)
+map <leader>e :NERDTree <CR>
+
+" keymap Tab management
+map <leader>x <action>(CloseContent)
+map <leader>xo <action>(CloseAllEditorsButActive)
+map <leader>xa <action>(CloseAllEditors)
+
+" the default c-o and c-i behaviours have certain inconsistencies with
+" vim which i can't quite pinpoint.
+" use the default intellij behaviours instead.
+map <C-o> <action>(Back)
+map <C-i> <action>(Forward)
+
+" keymap Git
+map <leader>rh <action>(Vcs.RollbackChangedLines)
+map <leader>ph <action>(VcsShowCurrentChangeMarker)
+map [c <action>(VcsShowPrevChangeMarker)
+map ]c <action>(VcsShowNextChangeMarker)
+map <leader>pH <action>(Vcs.ShowTaGbbedFileHistory)
+
+" keymap utility
+map <C-p> <Up>
+map <C-n> <Down>
+map <leader>[ <action>(CollapseRegion)
+map <leader>] <action>(ExpandRegion)
+map <leader>fm <action>(ReformatCode)
+map <leader>fmo <action>(OptimizeImports)
+map <leader>R <action>(Refactorings.QuickListPopupAction)
+" [d]ebug [c]ontinue
+map <leader>dc <action>(ChooseRunConfiguration)
+" [d]ebug [p]lay
+map <leader>dp <action>(TriggerPlayInUnity)
+" [d]ebug [t]erminate
+map <leader>dt <action>(Stop)
+map <leader>doc <action>(QuickJavaDoc) 
+map <leader>zzz <action>(ToggleZenMode)
+
+
+" set handlers for important vim functionality, but keep some like copy paste, search etc
+sethandler <C-h> n:ide
+sethandler <C-2> a:ide
+sethandler <C-6> a:ide
+sethandler <C-A> a:vim
+sethandler <C-k> a:vim
+sethandler <C-C> a:ide
+sethandler <C-V> a:ide
+sethandler <C-D> a:vim
+sethandler <C-E> a:vim
+sethandler <C-G> a:vim
+sethandler <C-I> a:vim
+sethandler <C-M> a:vim
+sethandler <C-N> a:vim
+sethandler <C-O> a:vim
+sethandler <C-P> a:vim
+sethandler <C-R> a:vim
+sethandler <C-S> a:vim
+sethandler <C-T> a:vim
+sethandler <C-U> a:vim
+sethandler <C-W> a:vim
+sethandler <C-\> a:vim
+sethandler <C-]> a:vim
+sethandler <C-f> a:ide
